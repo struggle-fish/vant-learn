@@ -15,9 +15,13 @@ import { ScopedSlot, DefaultSlots } from '../utils/types';
 export type ButtonType = 'default' | 'primary' | 'info' | 'warning' | 'danger';
 
 export type ButtonSize = 'large' | 'normal' | 'small' | 'mini';
-
+// TODO: TS: 注解
+/*
+* A & B  交叉类型，包含了 A 和 B 的所有类型
+* keyof 操作符 用于获取某种类型的所有键，其返回类型是联合类型。
+* */
 export type ButtonProps = RouteProps & {
-  tag: keyof HTMLElementTagNameMap | string;
+  tag: keyof HTMLElementTagNameMap | string; // 可以自定义标签
   type: ButtonType;
   size: ButtonSize;
   text?: string;

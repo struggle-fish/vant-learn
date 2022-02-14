@@ -45,13 +45,14 @@ function gen(name: string, mods?: Mods): string {
 
 export function createBEM(name: string) {
   return function (el?: Mods, mods?: Mods): Mods {
+    // TODO: TS: 注解
+    // 这个不就是参数各种判断 字符串 ，对象, 字符的数组 对象的数组，各种移动
     if (el && typeof el !== 'string') {
       mods = el;
       el = '';
     }
 
     el = el ? `${name}__${el}` : name;
-
     return `${el}${gen(el, mods)}`;
   };
 }
