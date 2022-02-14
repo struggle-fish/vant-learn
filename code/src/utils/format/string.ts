@@ -1,5 +1,6 @@
 const camelizeRE = /-(\w)/g;
-
+// TODO: TS注解
+// 连字符 - 转驼峰  on-click => onClick
 export function camelize(str: string): string {
   return str.replace(camelizeRE, (_, c) => c.toUpperCase());
 }
