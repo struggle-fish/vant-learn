@@ -45,7 +45,8 @@ export type ButtonProps = RouteProps & {
 export type ButtonEvents = {
   onClick?(event: Event): void;
 };
-
+// TODO: TS: 不懂
+// 不懂这个是做什么的
 export type ButtonSlots = DefaultSlots & {
   icon?: ScopedSlot;
   loading?: ScopedSlot;
