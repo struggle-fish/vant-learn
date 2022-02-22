@@ -74,10 +74,8 @@ function Button(
   } = props;
 
   const style: Record<string, string | number> = {};
-
   if (color) {
     style.color = plain ? color : 'white';
-
     if (!plain) {
       // Use background instead of backgroundColor to make linear-gradient work
       style.background = color;
