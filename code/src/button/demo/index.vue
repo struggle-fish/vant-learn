@@ -2,7 +2,7 @@
   <demo-section>
     <demo-block :title="t('type')">
       <div class="demo-button-row">
-        <van-button type="primary" loading>{{ t('primary') }}</van-button>
+        <van-button type="primary" >{{ t('primary') }}</van-button>
 <!--        <van-button type="info">{{ t('info') }}</van-button>-->
 <!--        <van-button type="default" >{{ t('default') }}</van-button>-->
       </div>

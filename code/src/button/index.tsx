@@ -119,7 +119,6 @@ function Button(
     ]),
     { [BORDER_SURROUND]: hairline },
   ];
-
   function renderIcon() {
     if (loading) {
       return slots.loading ? (

@@ -25,13 +25,14 @@ export function inherit(
   context: Context,
   inheritListeners?: boolean
 ): InheritContext {
+  console.log(context)
   const result = inheritKey.reduce((obj, key) => {
     if (context.data[key]) {
       obj[mapInheritKey[key] || key] = context.data[key];
     }
     return obj;
   }, {} as InheritContext);
-
+  console.log(result, 'result--234234')
   if (inheritListeners) {
     result.on = result.on || {};
     Object.assign(result.on, context.data.on);

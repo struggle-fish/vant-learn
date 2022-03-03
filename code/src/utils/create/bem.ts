@@ -34,9 +34,10 @@ function gen(name: string, mods?: Mods): string {
   }
 
   if (Array.isArray(mods)) {
+    // TODO: TS: 注解
+    // 递归调用 拼接class van-button--primary
     return mods.reduce<string>((ret, item) => ret + gen(name, item), '');
   }
-
   return Object.keys(mods).reduce(
     (ret, key) => ret + (mods[key] ? gen(name, key) : ''),
     ''
