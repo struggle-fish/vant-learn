@@ -2,7 +2,7 @@
   <demo-section>
     <demo-block :title="t('type')">
       <div class="demo-button-row">
-        <van-button type="primary" >{{ t('primary') }}</van-button>
+        <van-button type="primary" :aa="'哈哈哈'" ref="button1" @click="testButton" :key="1">{{ t('primary') }}</van-button>
 <!--        <van-button type="info">{{ t('info') }}</van-button>-->
 <!--        <van-button type="default" >{{ t('default') }}</van-button>-->
       </div>
@@ -140,6 +140,11 @@ export default {
       blockElement: 'Block Element',
     },
   },
+  methods: {
+    testButton() {
+      console.log('点击按钮')
+    }
+  }
 };
 </script>
 

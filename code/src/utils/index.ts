@@ -18,9 +18,10 @@ export function isFunction(val: unknown): val is Function {
   return typeof val === 'function';
 }
 
-// TODO: TS注解:
-// Record<K extends keyof any, T> 的作用是将 K 中所有的属性的值转化为 T 类型。
-// https://blog.csdn.net/weixin_38080573/article/details/92838045
+/*  TODO: TS注解:
+* Record<K extends keyof any, T> 的作用是将 K 中所有的属性的值转化为 T 类型。
+* https://blog.csdn.net/weixin_38080573/article/details/92838045
+* */
 export function isObject(val: unknown): val is Record<any, any> {
   return val !== null && typeof val === 'object';
 }

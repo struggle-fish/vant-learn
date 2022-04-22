@@ -52,6 +52,10 @@ export function unifySlots(context: RenderContext) {
   return scopedSlots;
 }
 
+// TODO: TS: 注解
+//  这个好像是把组件变相的转成函数了-为什么要这么做？
+//  https://cn.vuejs.org/v2/guide/render-function.html#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6
+//  函数式组件-
 // should be removed after Vue 3
 function transformFunctionComponent(
   pure: FunctionComponent
@@ -66,6 +70,8 @@ function transformFunctionComponent(
 }
 
 export function createComponent(name: string) {
+  // TODO: TS: 注解 泛型语法: 名字<T1, T2, ...> 返回一个泛型函数
+  //   src 是个函数
   return function <Props = DefaultProps, Events = {}, Slots = {}>(
     sfc: VantComponentOptions | FunctionComponent
   ): TsxComponent<Props, Events, Slots> {

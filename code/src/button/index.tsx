@@ -51,6 +51,8 @@ export type ButtonSlots = DefaultSlots & {
   icon?: ScopedSlot;
   loading?: ScopedSlot;
 };
+// TODO: TS: 注解
+//  先准备好了 ButtonProps ButtonEvents ButtonSlots 给创建组件使用
 
 const [createComponent, bem] = createNamespace('button');
 
@@ -94,6 +96,7 @@ function Button(
       event.preventDefault();
     }
     if (!loading && !disabled) {
+      console.log('点击按钮')
       emit(ctx, 'click', event);
       functionalRoute(ctx);
     }
